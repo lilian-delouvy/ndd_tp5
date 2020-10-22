@@ -13,6 +13,8 @@ Property couleur As %String;
 
 Property nbPlaces As %Integer;
 
+Index consulterParPlaque On plaque;
+
 Storage Default
 {
 <Data name="VoitureDefaultData">

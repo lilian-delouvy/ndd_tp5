@@ -15,7 +15,7 @@ ClassMethod creerVoiture(pRequest As msg.creerVoitureDmde, Output pResponse As m
     do ##class(Transform.WsVoitureToVoiture).Transform(pRequest.voiture,.voiture)
     set tsc = voiture.%Save()
 
-    set pResponse.codeRetour = tsc
+    set pResponse.codeRetour = "OK"
 
     Quit $$$OK
 }
