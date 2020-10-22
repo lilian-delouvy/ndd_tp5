@@ -1,15 +1,14 @@
-Class App.Installer
+Class App.InstallerCommande
 {
 
 XData setup
 {
 <Manifest>
-  <Default Name="SourceDir" Value="/opt/irisapp/src"/>
+  <Default Name="SourceDir" Value="/opt/irisapp/Commande/src"/>
 
-  <Namespace Name="IRISAPP" Code="IRISAPP" Data="IRISAPP" Create="yes" Ensemble="1">
-
+  <Namespace Name="COMMANDE" Code="COMMANDE" Data="COMMANDE" Create="yes" Ensemble="1">
     <Configuration>
-      <Database Name="IRISAPP" Dir="/opt/irisapp/irisapp/data" Create="yes"/>
+      <Database Name="COMMANDE" Dir="/opt/irisapp/commande/data" Create="yes"/>
     </Configuration>
     <Import File="${SourceDir}" Flags="ck" Recurse="1"/>
   </Namespace>

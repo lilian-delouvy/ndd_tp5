@@ -27,22 +27,11 @@ RUN \
   do $SYSTEM.OBJ.Load("InstallerReservation.cls", "ck") \
   set sc = ##class(App.InstallerCommande).setup() \
   set sc = ##class(App.InstallerReservation).setup() \
-  zn "COMMANDE" \
-  do InsertData^Init.initData() \
   zn "%SYS" \
   write "Create web application ..." \
-  set webName = "/api/reservation" \
-  set webProperties("DispatchClass") = "BS.API" \
-  set webProperties("NameSpace") = "RESERVATION" \
-  set webProperties("Enabled") = 1 \
-  set webProperties("AutheEnabled") = 32 \
-  set sc = ##class(Security.Applications).Create(webName, .webProperties) \
-  write sc \
-  write "Web application "_webName_" has been created!" \
-  write "Create web application ..." \
-  set webName = "/api/commande" \
-  set webProperties("DispatchClass") = "BS.API" \
-  set webProperties("NameSpace") = "COMMANDE" \
+  set webName = "/crud" \
+  set webProperties("DispatchClass") = "Sample.PersonREST" \
+  set webProperties("NameSpace") = "IRISAPP" \
   set webProperties("Enabled") = 1 \
   set webProperties("AutheEnabled") = 32 \
   set sc = ##class(Security.Applications).Create(webName, .webProperties) \

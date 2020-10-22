@@ -1,15 +1,15 @@
-Class App.Installer
+Class App.InstallerReservation
 {
 
 XData setup
 {
 <Manifest>
-  <Default Name="SourceDir" Value="/opt/irisapp/src"/>
+  <Default Name="SourceDir" Value="/opt/irisapp/Reservation/src"/>
 
-  <Namespace Name="IRISAPP" Code="IRISAPP" Data="IRISAPP" Create="yes" Ensemble="1">
+  <Namespace Name="RESERVATION" Code="RESERVATION" Data="RESERVATION" Create="yes" Ensemble="1">
 
     <Configuration>
-      <Database Name="IRISAPP" Dir="/opt/irisapp/irisapp/data" Create="yes"/>
+      <Database Name="RESERVATION" Dir="/opt/irisapp/reservation/data" Create="yes"/>
     </Configuration>
     <Import File="${SourceDir}" Flags="ck" Recurse="1"/>
   </Namespace>
