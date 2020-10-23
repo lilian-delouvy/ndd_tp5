@@ -7,7 +7,7 @@ Parameter ADAPTER = "Ens.OutboundAdapter";
 
 Parameter INVOCATION = "Queue";
 
-ClassMethod creerVoiture(pRequest As msg.creerVoitureDmde, Output pResponse As msg.creerVoitureRpse) As %Status
+Method creerVoiture(pRequest As msg.creerVoitureDmde, Output pResponse As msg.creerVoitureRpse) As %Status
 {
     
     set pResponse = ##class(msg.creerVoitureRpse).%New()

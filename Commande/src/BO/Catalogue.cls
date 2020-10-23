@@ -7,7 +7,7 @@ Parameter ADAPTER = "Ens.OutboundAdapter";
 
 Parameter INVOCATION = "Queue";
 
-ClassMethod getCatalogue(pRequest As msg.getCatalogueDmde, Output pResponse As msg.getCatalogueRpse) As %Status
+Method getCatalogue(pRequest As msg.getCatalogueDmde, Output pResponse As msg.getCatalogueRpse) As %Status
 {
 
     set pResponse = ##class(msg.getCatalogueRpse).%New()
@@ -31,7 +31,7 @@ ClassMethod getCatalogue(pRequest As msg.getCatalogueDmde, Output pResponse As m
     Quit $$$OK
 }
 
-ClassMethod ajouterVoitureCatalogue(pRequest As msg.ajouterVoitureCatalogueDmde, Output pResponse As msg.ajouterVoitureCatalogueRpse) As %Status
+Method ajouterVoitureCatalogue(pRequest As msg.ajouterVoitureCatalogueDmde, Output pResponse As msg.ajouterVoitureCatalogueRpse) As %Status
 {
 
     set pResponse = ##class(msg.ajouterVoitureCatalogueRpse).%New()
@@ -45,7 +45,7 @@ ClassMethod ajouterVoitureCatalogue(pRequest As msg.ajouterVoitureCatalogueDmde,
     Quit $$$OK
 }
 
-ClassMethod consulterVoitureCatalogue(pRequest As msg.consulterVoitureCatalogueDmde, Output pResponse As msg.consulterVoitureCatalogueRpse) As %Status
+Method consulterVoitureCatalogue(pRequest As msg.consulterVoitureCatalogueDmde, Output pResponse As msg.consulterVoitureCatalogueRpse) As %Status
 {
 
     set pResponse = ##class(msg.consulterVoitureCatalogueRpse).%New()
