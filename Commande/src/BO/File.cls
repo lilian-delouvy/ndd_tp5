@@ -1,9 +1,9 @@
 Class BO.File Extends Ens.BusinessOperation
 {
 
-Property Adapter As EnsLib.File.InboundAdapter;
+Property Adapter As EnsLib.File.OutboundAdapter;
 
-Parameter ADAPTER = "EnsLib.File.InboundAdapter";
+Parameter ADAPTER = "EnsLib.File.OutboundAdapter";
 
 Parameter INVOCATION = "Queue";
 
