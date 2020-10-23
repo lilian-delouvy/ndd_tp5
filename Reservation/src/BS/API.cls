@@ -38,19 +38,17 @@ ClassMethod SwaggerSpec() As %Status
 
 ClassMethod CreerVoiture() As %Status
 {
-	#dim tSC As %Status = $$$OK
-    #dim e As %Exception.AbstractException
-    Set person = ##class(msg.creerVoitureDmde).%New()
+    #dim tSC As %Status = $$$OK
+    Set msg = ##class(msg.creerVoitureDmde).%New()
+
     Set data=%request.Content
+    $$$TOE(tSC,msg.%JSONImport(data))
 
-
-    $$$TOE(tSC,person.%JSONImport(data))
-
-    Set %response.Status = 204
+    set tSC = ##class(Ens.Director).CreateBusinessService("ServiceVoiture",.tService) if $$$ISERR(tSC) quit 
+    set tSC = tService.ProcessInput(msg,.response,"creerVoiture")
+    Set %response.Status = 200
     Set %response.ContentType = ..#CONTENTTYPEJSON
-    //d data.%ToJSON()
-    Do person.%JSONExport()
-
+    Do response.%JSONExport()
     Quit tSC
 }
 
