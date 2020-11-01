@@ -10,7 +10,7 @@ InsertData() public
     set voiture.nbPlaces = "2"
     set voiture.prix = "10458"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "Renault"
@@ -19,7 +19,7 @@ InsertData() public
     set voiture.nbPlaces = "5"
     set voiture.prix = "31258"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "Renault"
@@ -28,7 +28,7 @@ InsertData() public
     set voiture.nbPlaces = "7"
     set voiture.prix = "52125"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "BMW"
@@ -37,7 +37,7 @@ InsertData() public
     set voiture.nbPlaces = "5"
     set voiture.prix = "75874"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "BMW"
@@ -46,7 +46,7 @@ InsertData() public
     set voiture.nbPlaces = "5"
     set voiture.prix = "48752"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "Peugeot"
@@ -55,7 +55,7 @@ InsertData() public
     set voiture.nbPlaces = "7"
     set voiture.prix = "48985"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "Peugeot"
@@ -64,7 +64,7 @@ InsertData() public
     set voiture.nbPlaces = "5"
     set voiture.prix = "28985"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 
     set voiture = ##class(webObjet.wsCatalogue).%New()
     set voiture.marque = "BMW"
@@ -73,5 +73,5 @@ InsertData() public
     set voiture.nbPlaces = "5"
     set voiture.prix = "38752"
     set msg.voiture = voiture
-    do ##class(BO.Catalogue).ajouterVoitureCatalogue(msg, .reponse)
+    do ##class(BO.Catalogue).ajouterVoitureCatalogueInit(msg, .reponse)
 }

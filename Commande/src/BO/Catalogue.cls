@@ -61,6 +61,20 @@ Method consulterVoitureCatalogue(pRequest As msg.consulterVoitureCatalogueDmde, 
     Quit $$$OK
 }
 
+ClassMethod ajouterVoitureCatalogueInit(pRequest As msg.ajouterVoitureCatalogueDmde, Output pResponse As msg.ajouterVoitureCatalogueRpse) As %Status
+{
+
+    set pResponse = ##class(msg.ajouterVoitureCatalogueRpse).%New()
+    
+    set voiture = ##class(data.Catalogue).%New()
+    do ##class(Transform.WsCatalogueToCatalogue).Transform(pRequest.voiture,.voiture)
+    set tsc = voiture.%Save()
+
+    set pResponse.codeRetour = tsc
+
+    Quit $$$OK
+}
+
 XData MessageMap
 {
 <MapItems>
