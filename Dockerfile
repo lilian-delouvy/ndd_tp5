@@ -29,6 +29,7 @@ RUN \
   set sc = ##class(App.InstallerReservation).setup() \
   zn "COMMANDE" \
   do InsertData^Init.initData() \
+  set ^plaque = "AA-001-AA" \
   zn "%SYS" \
   write "Create web application ..." \
   set webName = "/api/reservation" \

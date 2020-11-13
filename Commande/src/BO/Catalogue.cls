@@ -56,7 +56,9 @@ Method consulterVoitureCatalogue(pRequest As msg.consulterVoitureCatalogueDmde, 
         set pResponse.codeRetour = "OK" 
     }
     else {
-        set pResponse = "KO"
+        set pResponse.codeRetour = "KO"
+        set pResponse.libErreur = "Voiture inexistante au catalogue"
+
     }
     Quit $$$OK
 }

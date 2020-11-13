@@ -18,7 +18,7 @@ Method OnProcessInput(pInput As %File, pOutput As %RegisteredObject) As %Status
     set msg.voiture.couleur = $PIECE(line,";",5)
     set msg.voiture.nbPlaces = $PIECE(line,";",6)
 
-    do ..SendRequestSync("",msg, .response)
+    do ..SendRequestSync("CommandeVoiture",msg, .response)
 
     Return $$$OK
 }
